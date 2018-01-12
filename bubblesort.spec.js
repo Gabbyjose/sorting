@@ -1,7 +1,7 @@
 
 describe('Bubble Sort', function(){
   beforeAll(function() {
-    spyOn(window, 'swap').and.callThrough();
+ //   spyOn(window, 'swap').and.callThrough();
   });
 
   beforeEach(function(){
@@ -13,6 +13,7 @@ describe('Bubble Sort', function(){
   });
 
   it('checks the amount of swaps', function(){
+    spyOn(window, 'swap').and.callThrough();
     bubbleSort([1, 2, 3, 4]);
     expect(swap.calls.count()).toEqual(0);
   });
